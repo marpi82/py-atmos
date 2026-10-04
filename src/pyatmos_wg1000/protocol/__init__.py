@@ -47,6 +47,7 @@ from pyatmos_wg1000.protocol.info_value import (
     split_display,
 )
 from pyatmos_wg1000.protocol.login import LoginResult, encode_login, parse_login_result
+from pyatmos_wg1000.protocol.pages import INFO_PAGE_POLL_INTERVAL, parse_pages_js_hod16_intervals
 from pyatmos_wg1000.protocol.params import (
     AcdDate,
     AcdTime,
@@ -75,6 +76,7 @@ __all__ = [
     "AC16_EMPTY_TEXT_ID",
     "AC16_OWN_TEXT_OFFSET",
     "AC16_TEXT_INDEX",
+    "INFO_PAGE_POLL_INTERVAL",
     "AcdDate",
     "AcdTime",
     "Channel",
@@ -138,6 +140,7 @@ __all__ = [
     "parse_info_display",
     "parse_info_row",
     "parse_login_result",
+    "parse_pages_js_hod16_intervals",
     "parse_part",
     "part_names",
     "regime_preset_index",

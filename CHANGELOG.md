@@ -7,6 +7,19 @@ and this project uses [Calendar Versioning](https://calver.org/) (`YYYY.M.PATCH`
 
 ## [Unreleased]
 
+## [2026.10.1] - 2026-10-04
+
+First stable release.
+
+### Changed
+
+- PyPI classifier ``Development Status`` is now Production/Stable.
+
+### Added
+
+- ``parse_pages_js_hod16_intervals`` / ``INFO_PAGE_POLL_INTERVAL``: stock
+  ``Pages.js`` ``PrmID*`` → HOD16 poll cadence (Informace Info dump is 1 s).
+
 ## [2026.9.0b10] - 2026-09-26
 
 ### Fixed
