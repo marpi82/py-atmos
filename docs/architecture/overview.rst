@@ -38,6 +38,12 @@ produces no event after the first sample. Temperature scaling stays in
 :func:`pyatmos_wg1000.protocol.params.decode_acd_temperature` and is applied by the
 integration, not stored a second time.
 
+The stock UI poll cadence lives in ``Pages.js`` (``PrmID1s`` … ``PrmID30s``).
+:func:`pyatmos_wg1000.protocol.pages.parse_pages_js_hod16_intervals` extracts that
+map. :data:`pyatmos_wg1000.protocol.pages.INFO_PAGE_POLL_INTERVAL` is the
+Informace-page Info dump period (1 s). The integration chooses which HOD16
+locals to poll.
+
 .. code-block:: python
 
    from pyatmos_wg1000 import AtmosClient, InfoFeed

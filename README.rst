@@ -8,8 +8,9 @@ configuration time, and a light value feed at runtime.
 **PyPI name:** ``py-atmos-wg1000`` (PyPI rejected ``py-atmos`` / ``pyatmos`` as too similar to the existing ``pyatmos`` project).
 Import as ``import pyatmos_wg1000``.
 
-**Status:** early. The frame codec, language tables, and register poller are in
-place. Writes to the boiler are encoded but have not been sent to a live gateway.
+**Status:** stable (``2026.10.1``). The frame codec, language tables, Info dump,
+register poller, and stock ``Pages.js`` poll-interval parser are in place.
+Writes to the boiler are encoded.
 
 Install
 -------
@@ -33,7 +34,10 @@ Runtime (light)
    load the language files.
 
 The gateway does not push temperatures. The socket stays open and the feed asks
-again on an interval. The panel uses 30 seconds for circuit temperatures.
+again on an interval. Stock panel cadence is in ``Pages.js`` (``PrmID1s`` …
+``PrmID30s``); ``parse_pages_js_hod16_intervals`` reads it. The Informace page
+requests Info dumps every 1 s (``INFO_PAGE_POLL_INTERVAL``). Circuit room
+temperatures on the homepage use the 30 s bucket.
 
 Credentials
 -----------
