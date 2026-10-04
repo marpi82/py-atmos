@@ -11,6 +11,10 @@ and this project uses [Calendar Versioning](https://calver.org/) (`YYYY.M.PATCH`
 
 First stable release.
 
+### Changed
+
+- PyPI classifier ``Development Status`` is now Production/Stable.
+
 ### Added
 
 - ``parse_pages_js_hod16_intervals`` / ``INFO_PAGE_POLL_INTERVAL``: stock
